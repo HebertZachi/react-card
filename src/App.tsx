@@ -11,8 +11,11 @@ export type Card = {
   }[];
 };
 
+interface AppProps {
+  card: Card;
+}
 
-export const App = ({card}: {card: Card}) => {
+export const App: React.FC<AppProps> = ({card}: {card: Card}) => {
   return (
     <div className='appContainer'>
       <img className='photo' src={card.photo} alt="profile photo" />
